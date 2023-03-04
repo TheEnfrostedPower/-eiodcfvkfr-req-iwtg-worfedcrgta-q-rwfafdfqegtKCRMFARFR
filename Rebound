@@ -1,4 +1,4 @@
-repeat wait() until game.ReplicatedStorage.GameData.LatestRoom.Connect:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/ReboundCue"))()
 wait(4)
