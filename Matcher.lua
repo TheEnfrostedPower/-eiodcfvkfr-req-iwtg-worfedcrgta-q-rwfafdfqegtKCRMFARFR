@@ -113,13 +113,3 @@ function KernelMove()
 end
 
 KernelMove()
-
-local Count = 4
-
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-	if Count ~= 0 then
-		Count -= 1
-		wait(3.5)
-		KernelMove()
-	end
-end)
