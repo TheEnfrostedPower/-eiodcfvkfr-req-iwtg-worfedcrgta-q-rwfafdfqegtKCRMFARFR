@@ -215,3 +215,17 @@ spawn(function() --Rebound
 		end
 	end
 end)
+
+spawn(function()--Seek Eyes
+	game.Workspace.CurrentRooms.DescendantAdded:Connect(function(Descent)
+	if Descent:IsA("Model") then
+		if Descent.Name == "Eye" then
+			wait(.001)
+			local GetNew = game:GetObjects("rbxassetid://11854254581")[1]
+			GetNew.Parent = Descent.Parent
+			GetNew:PivotTo(Descent.PrimaryPart.CFrame)
+			Descent:Destroy()
+			end
+		end
+	end)
+end)
