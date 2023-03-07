@@ -70,7 +70,7 @@ local function Move()
 			if v.Character ~= nil and not v.Character:GetAttribute("Hiding") then
 				if canSeeTarget(v.Character,150) then
 					--ReboundMoving:Stop()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/ReboundJumpscare"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound_Jumpscare"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Rebound"
 					wait(.5)
 					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
