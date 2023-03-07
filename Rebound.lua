@@ -68,7 +68,7 @@ local function Move()
 			local v = game.Players.LocalPlayer
 			local parent = script.Parent
 			if v.Character ~= nil and not v.Character:GetAttribute("Hiding") then
-				if canSeeTarget(v.Character,150) then
+				if canSeeTarget(v.Character,90) then
 					--ReboundMoving:Stop()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound_Jumpscare"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Rebound"
