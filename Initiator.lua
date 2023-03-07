@@ -1,4 +1,4 @@
-if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 1 then
+if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
 	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script before A-1! I mean.. Door 1?","Well anyways, Remember this"},"Yellow")
 	task.wait(.2)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
