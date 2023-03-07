@@ -64,7 +64,7 @@ local function Move()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
 					wait(.5)
 					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
-					--firesignal(game.ReplicatedStorage.Bricks.DeathHint.OnClientEvent, {"You died to matcher..","His presence is known for Blinking the lights or Breaking all the lights..","When he does this, Hide immediately!"})
+					firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to matcher..","His presence is known for Blinking the lights or Breaking all the lights..","When he does this, Hide immediately!"},"Blue")
 					for i,v in pairs(entity:GetDescendants()) do
 						if v:IsA("Sound") then
 							v:Stop()
