@@ -11,8 +11,8 @@ camShake:Start()
 local killed = false
 local function Move()
 	local val = 80
-	local Reboundspeed = 1
-	local ReboundDelay = 1
+	local Reboundspeed = 2.5
+	local ReboundDelay = 2.5
 	local storer = Reboundspeed
 	local entityheight = Vector3.new(0,2,0)
 
@@ -117,6 +117,7 @@ end
 --local GetAll = workspace.CurrentRooms:GetChildren()
 
 function KernelMove()
+	task.wait(1.2)
 		Move()
 end
 
@@ -127,7 +128,7 @@ local Count = 4
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 	if Count ~= 0 then
 		Count -= 1
-		wait(1.5)
+		wait(3.5)
 		KernelMove()
 	end
 end)
