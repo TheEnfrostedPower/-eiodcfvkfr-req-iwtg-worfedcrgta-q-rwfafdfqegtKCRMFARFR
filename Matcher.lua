@@ -108,6 +108,7 @@ end
 
 function KernelMove()
 	if workspace.Ambience_Seek.Playing == false and workspace.Ambience_Figure.Playing == false then
+		task.wait(2)
 		Move()
 	end
 end
