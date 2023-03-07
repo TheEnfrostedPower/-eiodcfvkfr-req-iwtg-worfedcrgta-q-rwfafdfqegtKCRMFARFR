@@ -66,7 +66,7 @@ spawn(function() --INGTRO
 
 	--// Instances
 	local sound = Instance.new("Sound",Verif)
-	sound.SoundId = "rbxassetid://rbxassetid://4835664238"
+	sound.SoundId = "rbxassetid://4835664238"
 	sound:Play()
 	local int1 = Instance.new("ScreenGui")
 	int1.DisplayOrder = 1000
