@@ -58,7 +58,7 @@ local function Move()
 			local v = game.Players.LocalPlayer
 			local parent = script.Parent
 			if v.Character ~= nil and not v.Character:GetAttribute("Hiding") then
-				if canSeeTarget(v.Character,175) then
+				if canSeeTarget(v.Character,70) then
 					--ReboundMoving:Stop()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
