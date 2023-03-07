@@ -1,4 +1,4 @@
-if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
+if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 1 then
 	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script before A-1! I mean.. Door 1?","Well anyways, Remember this"},"Yellow")
 	task.wait(.2)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
@@ -23,7 +23,9 @@ spawn(function() --INGTRO
 ]]--
 
 	--// Instances
-
+	local sound = Instance.new("Sound",Verif)
+	sound.SoundId = "rbxassetid://rbxassetid://4835664238"
+	sound:Play()
 	local int1 = Instance.new("ScreenGui")
 	int1.DisplayOrder = 1000
 	int1.IgnoreGuiInset = true
@@ -131,27 +133,43 @@ end)
 
 -----------STARTING
 
+local Greed = false
 spawn(function() --GREED
 	while true do
-		wait(100)
-		game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/EntityLoads/main/GreedSpawn"))()
+		if Greed == false then
+			Greed = true
+			task.wait(80)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Greed.lua"))()
+			Greed = false
+		end
 	end
 end)
 
-spawn(function()--MATCHER
+local Matcher = false
+spawn(function() --MATCHER
 	while true do
-		wait(150)
-		game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Matcher.lua"))()
+		if Matcher == false then
+			Matcher = true
+			task.wait(150)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Matcher.lua"))()
+			Matcher = false
+		end
 	end
 end)
 
-spawn(function()--Rebound
+
+local Rebound = false
+spawn(function() --Rebound
+	
 	while true do
-		wait(300)
-		game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound.lua"))()
+		if Rebound == false then
+			Rebound = true
+			task.wait(230)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound.lua"))()
+			Rebound = false
+		end
 	end
 end)
-
