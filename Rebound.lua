@@ -11,8 +11,8 @@ camShake:Start()
 local killed = false
 local function Move()
 	local val = 80
-	local Reboundspeed = 2
-	local ReboundDelay = 2
+	local Reboundspeed = 1
+	local ReboundDelay = 1
 	local storer = Reboundspeed
 	local entityheight = Vector3.new(0,2,0)
 
