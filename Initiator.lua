@@ -1,4 +1,4 @@
-if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 1 then
+if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
 	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script before A-1! I mean.. Door 1?","Well anyways, Remember this"},"Yellow")
 	task.wait(.2)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
@@ -12,6 +12,48 @@ local Verif = Instance.new("WorldModel",workspace)
 Verif.Name = "endlessdoors"
 
 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+
+spawn(function()
+	local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+	local Achievements = debug.getupvalue(Unlock, 1)
+
+	local custom = {
+
+		Title = "Nova's Script Execution", 
+
+		Desc = "You did it, You finally get to use the Script!",  --first line
+
+		Reason = "You used nova's Endless Doors Mod!", -- Balls
+
+		BadgeId = 12591502863, --change badge id for image
+
+		Category = 0,
+
+	}
+
+	local old = {}
+
+	for i, v in next, Achievements.Join do
+
+		old[i] = v
+
+	end
+
+	for i, v in next, custom do
+
+		Achievements.Join[i] = v
+
+	end
+
+	Unlock(nil, "Join")
+
+	for i, v in next, old do
+
+		Achievements.Join[i] = v
+
+	end
+end)
 
 spawn(function() --INGTRO
 	--[[
