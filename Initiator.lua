@@ -135,7 +135,7 @@ spawn(function() --GREED
 	while true do
 		wait(100)
 		game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/GreedSpawn"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/EntityLoads/main/GreedSpawn"))()
 	end
 end)
 
