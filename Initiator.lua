@@ -224,6 +224,7 @@ spawn(function()--Seek Eyes
 			local GetNew = game:GetObjects("rbxassetid://11854254581")[1]
 			GetNew.Parent = Descent.Parent
 			GetNew:PivotTo(Descent.PrimaryPart.CFrame)
+			GetNew.Name = "EyeReplacement"
 			Descent:Destroy()
 			end
 		end
