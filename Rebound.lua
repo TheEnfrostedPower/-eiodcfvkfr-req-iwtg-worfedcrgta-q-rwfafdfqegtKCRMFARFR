@@ -117,9 +117,7 @@ end
 --local GetAll = workspace.CurrentRooms:GetChildren()
 
 function KernelMove()
-	if workspace.Ambience_Seek.Playing == false and workspace.Ambience_Figure.Playing == false then
 		Move()
-	end
 end
 
 KernelMove()
@@ -129,7 +127,7 @@ local Count = 4
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 	if Count ~= 0 then
 		Count -= 1
-		wait(3.5)
+		wait(1.5)
 		KernelMove()
 	end
 end)
