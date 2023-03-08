@@ -60,11 +60,12 @@ local function Move()
 			if v.Character ~= nil and not v.Character:GetAttribute("Hiding") then
 				if canSeeTarget(v.Character,70) then
 					--ReboundMoving:Stop()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
+						firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to matcher..","His presence is known for Blinking the lights or Breaking all the lights..","When he does this, Hide immediately!"},"Blue")
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Matcher_Jumpscare.lua"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
 					wait(.5)
 					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
-					firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to matcher..","His presence is known for Blinking the lights or Breaking all the lights..","When he does this, Hide immediately!"},"Blue")
+					
 					for i,v in pairs(entity:GetDescendants()) do
 						if v:IsA("Sound") then
 							v:Stop()
