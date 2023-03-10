@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/ReboundCue"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/EntityLoads/main/ReboundCue"))()
 wait(4)
 local events = require(game.ReplicatedStorage.ClientModules.Module_Events)
 local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
