@@ -31,7 +31,7 @@ local function Move()
 		return sound
 	end
 	
-	local NewNoise = GetGitSound("https://github.com/XTRINT0/EntityLoads/blob/main/ReboundNoiseMoving.mp3?raw=true","ReboundNoiseMoving")
+	local NewNoise = GetGitSound("https://github.com/TheEnfrostedPower/EntityLoads/blob/main/ReboundNoiseMoving.mp3?raw=true","ReboundNoiseMoving")
 	NewNoise.Parent=entity
 	NewNoise.Volume = 6
 	NewNoise:Play()
