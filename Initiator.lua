@@ -180,7 +180,7 @@ spawn(function() --GREED
 	while true do
 		if Greed == false then
 			Greed = true
-			task.wait(80)
+			task.wait(130)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Greed.lua"))()
 			Greed = false
@@ -193,7 +193,7 @@ spawn(function() --MATCHER
 	while true do
 		if Matcher == false then
 			Matcher = true
-			task.wait(150)
+			task.wait(260)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Matcher.lua"))()
 			Matcher = false
@@ -208,7 +208,7 @@ spawn(function() --Rebound
 	while true do
 		if Rebound == false then
 			Rebound = true
-			task.wait(230)
+			task.wait(400)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound.lua"))()
 			Rebound = false
@@ -224,7 +224,7 @@ spawn(function()--Seek Eyes
 			local GetNew = game:GetObjects("rbxassetid://11854254581")[1]
 			GetNew.Parent = Descent.Parent
 			GetNew:PivotTo(Descent.PrimaryPart.CFrame)
-			GetNew.Name = "EyeReplacement"
+			GetNew.Name = "Replacement"
 			Descent:Destroy()
 			end
 		end
