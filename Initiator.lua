@@ -54,15 +54,8 @@ spawn(function()
 
 	end
 end)
-
+--[[
 spawn(function() --INGTRO
-	--[[
-	Roblox2Lua
-	----------
-	
-	This code was generated using
-	Deluct's Roblox2Lua plugin.
-]]--
 
 	--// Instances
 	local sound = Instance.new("Sound",Verif)
@@ -172,6 +165,7 @@ spawn(function() --INGTRO
 		TweenService:Create(script.Parent:FindFirstChild("WM"),TweenInfo.new(.5),{ImageTransparency = 0}):Play()
 	end)
 end)
+--]]
 
 -----------STARTING
 
