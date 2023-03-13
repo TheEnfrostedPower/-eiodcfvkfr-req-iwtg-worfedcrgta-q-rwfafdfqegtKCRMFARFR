@@ -54,8 +54,15 @@ spawn(function()
 
 	end
 end)
---[[
+
 spawn(function() --INGTRO
+	--[[
+	Roblox2Lua
+	----------
+	
+	This code was generated using
+	Deluct's Roblox2Lua plugin.
+]]--
 
 	--// Instances
 	local sound = Instance.new("Sound",Verif)
@@ -165,7 +172,6 @@ spawn(function() --INGTRO
 		TweenService:Create(script.Parent:FindFirstChild("WM"),TweenInfo.new(.5),{ImageTransparency = 0}):Play()
 	end)
 end)
---]]
 
 -----------STARTING
 
@@ -174,7 +180,7 @@ spawn(function() --GREED
 	while true do
 		if Greed == false then
 			Greed = true
-			task.wait(130)
+			task.wait(80)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Greed.lua"))()
 			Greed = false
@@ -187,7 +193,7 @@ spawn(function() --MATCHER
 	while true do
 		if Matcher == false then
 			Matcher = true
-			task.wait(260)
+			task.wait(150)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Matcher.lua"))()
 			Matcher = false
@@ -198,11 +204,10 @@ end)
 
 local Rebound = false
 spawn(function() --Rebound
-	
 	while true do
 		if Rebound == false then
 			Rebound = true
-			task.wait(400)
+			task.wait(230)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound.lua"))()
 			Rebound = false
@@ -210,17 +215,15 @@ spawn(function() --Rebound
 	end
 end)
 
-spawn(function()--Seek Eyes
-	game.Workspace.CurrentRooms.DescendantAdded:Connect(function(Descent)
-	if Descent:IsA("Model") then
-		if Descent.Name == "Eye" then
-			wait(.001)
-			local GetNew = game:GetObjects("rbxassetid://11854254581")[1]
-			GetNew.Parent = Descent.Parent
-			GetNew:PivotTo(Descent.PrimaryPart.CFrame)
-			GetNew.Name = "Replacement"
-			Descent:Destroy()
-			end
+local Blink = false
+spawn(function() --Blink
+	while true do
+		if Blink == false then
+			Blink = true
+			task.wait(120)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Blink.lua"))()
+			Blink = false
 		end
-	end)
+	end
 end)
