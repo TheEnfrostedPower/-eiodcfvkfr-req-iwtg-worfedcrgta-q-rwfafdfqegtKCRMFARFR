@@ -169,7 +169,8 @@ spawn(function() --INGTRO
 		TweenService:Create(Line,TweenInfo.new(.2,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Size = UDim2.new(0,0,0.015,0)}):Play()
 		TweenService:Create(script.Parent:FindFirstChild("LogoIntro"),TweenInfo.new(1,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Position = UDim2.new(0.036, 0,0.944, 0)}):Play()
 		wait(1)
-		TweenService:Create(script.Parent:FindFirstChild("WM"),TweenInfo.new(.5),{ImageTransparency = 0}):Play()
+		TweenService:Create(script.Parent:FindFirstChild("WM"),TweenInfo.new(.5),{ImageTransparency = 0.8}):Play()
+		TweenService:Create(script.Parent:FindFirstChild("LogoIntro"),TweenInfo.new(.5),{ImageTransparency = 0.8}):Play()
 	end)
 end)
 
@@ -184,6 +185,19 @@ spawn(function() --GREED
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Greed.lua"))()
 			Greed = false
+		end
+	end
+end)
+
+local Blink = false
+spawn(function() --Blink
+	while true do
+		if Blink == false then
+			Blink = true
+			task.wait(120)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Blink.lua"))()
+			Blink = false
 		end
 	end
 end)
@@ -215,15 +229,3 @@ spawn(function() --Rebound
 	end
 end)
 
-local Blink = false
-spawn(function() --Blink
-	while true do
-		if Blink == false then
-			Blink = true
-			task.wait(120)
-			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Blink.lua"))()
-			Blink = false
-		end
-	end
-end)
