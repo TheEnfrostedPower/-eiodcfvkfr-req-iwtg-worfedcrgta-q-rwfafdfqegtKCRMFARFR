@@ -196,7 +196,7 @@ spawn(function() --Blink
 			Blink = true
 			task.wait(120)
 			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Blink.lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Blink"))()
 			Blink = false
 		end
 	end
