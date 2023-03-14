@@ -11,7 +11,17 @@ end
 local Verif = Instance.new("WorldModel",workspace)
 Verif.Name = "endlessdoors"
 
+function ReplaceGitAu(GithubSnd,SoundName)
+		local url=GithubSnd
+		if not isfile(SoundName..".mp3") then
+			writefile(SoundName..".mp3", game:HttpGet(url))
+		end
+		return (getcustomasset or getsynasset)(SoundName..".mp3")
+	end
+
 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+
+
 
 spawn(function()
 	local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
