@@ -22,10 +22,10 @@ local function GrabGithubModel(ModelUrl,ModelName)
 end
 
 
-local Createor = GrabGithubModel("https://github.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/blob/main/BlinkMoving.rbxm","BlinkMoving")
+local Createor = game:GetObjects("rbxassetid://12797983747")[1]
 Createor.Parent = workspace
 local entity = Createor.RushNew
-entity.CFrame = ChosenRoom.RoomEntrance.CFrame * CFrame.new(0,-1,-5)
+entity.CFrame = ChosenRoom.RoomEntrance.CFrame * CFrame.new(0,-1,-10)
 entity.Anchored = true
 
 local InitiateSound = GrabGithubNoises("https://github.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/blob/main/BlinkInit.mp3?raw=true","BlinkInit")
