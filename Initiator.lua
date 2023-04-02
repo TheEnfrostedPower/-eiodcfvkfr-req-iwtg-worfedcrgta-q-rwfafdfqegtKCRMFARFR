@@ -240,3 +240,15 @@ spawn(function() --Rebound
 	end
 end)
 
+local Dark = false
+spawn(function() --Rebound
+	while true do
+		if Dark == false then
+			Dark = true
+			task.wait(400)
+			game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Dark.lua"))()
+			Dark = false
+		end
+	end
+end)
