@@ -80,7 +80,7 @@ spawn(function()
 						--loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/main/Rebound_Jumpscare"))()
 						--if v.Character:FindFirstChildOfClass("Humanoid").MoveDirection ~= Vector3.new(0,0,0) then
 						game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Blink"
-						game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
+						game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(40)
 						--killed = true
 						firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You were killed to Blink","He can spawn unexpected","Do not move when he's Yelping."}, "Blue")
 						for i,v in pairs(entity:GetDescendants()) do
