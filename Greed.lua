@@ -68,8 +68,8 @@ task.spawn(function()
 	local OkBro = false
 	game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 		if OkBro == false then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/GreedJumpscare"))()
-			game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
+			--loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/GreedJumpscare"))()
+			game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Greed"
 			firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"You died to who you call Greed.","He like's to bother you when you open a door!","He get's tired when he comes behind a door, So stay on the Lookout!"},"Blue")
 			wait(.7)
 			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(60)
